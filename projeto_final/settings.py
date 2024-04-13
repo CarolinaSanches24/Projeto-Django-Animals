@@ -133,7 +133,7 @@ USE_TZ = True
 # Defina o diretório onde seus arquivos estáticos serão coletados
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles'),]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 MEDIA_URL = '/media/'
