@@ -1,0 +1,24 @@
+/* styles.css */
+
+/* Estilizando o título principal */
+h1 {
+    color: #333; /* Cor do texto */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Estilizando os detalhes do animal */
+.container p {
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Estilizando os detalhes do histórico de saúde */
+.container h1:nth-of-type(2) {
+    margin-top: 40px; /* Margem superior */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Estilizando detalhes específicos */
+.container strong {
+    font-weight: bold; /* Texto em negrito */
+    margin-right: 5px; /* Margem direita */
+}

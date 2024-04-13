@@ -1,0 +1,10 @@
+.venv
+_venv_
+__pycache__/
+Lib/
+Scripts/
+pyvenv.cfg
+.env
+.vscode/
+myenv/
+.vscode

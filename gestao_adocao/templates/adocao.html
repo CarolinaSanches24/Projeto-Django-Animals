@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <div class="container">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <h1 class="text-body-emphasis">Formulário de Adoção de Animais</h1>
+        </header>
+        
+        {% load bootstrap5 %}
+        {% if sucesso %}
+            <div class="alert alert-success" role="alert">
+                Adoção realizada com sucesso!
+            </div>
+        {% else %}
+            <form action="" method="POST" id="form">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <button type="submit" class="btn btn-primary btn-block">Finalizar adoção</button>
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

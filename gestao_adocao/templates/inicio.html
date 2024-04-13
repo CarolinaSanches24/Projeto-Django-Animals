@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <script src="../assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Adoção de Pets - WomakersCode</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
+    <link href="/static/starter-template.css" rel="stylesheet">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+          <span class="fs-4">Adote</span>
+        </a>
+      </header>
+      <main>
+        {% block principal %}
+          <h1 class="text-body-emphasis">Adote um Pet</h1>
+          <p class="fs-5 col-md-8">Encontre o seu novo companheiro!</p>
+          <div class="mb-5">
+            <a href="{% url 'adocao' %}" class="btn btn-primary btn-lg px-4">Adote agora</a>
+          </div>
+          <hr class="col-3 col-md-2 mb-5">
+        {% endblock %}
+      </main>
+    </div>
+    <script src="/static/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

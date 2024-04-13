@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/search.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/registerAnimal.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/var.css' %}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .animal-card {
+            background-color: #f8f9fa; /* Cor de fundo do card */
+            border: 1px solid #dee2e6; /* Borda do card */
+            border-radius: 0.25rem; /* Arredondamento dos cantos */
+            margin-bottom: 20px; /* Espaçamento entre os cards */
+            display: flex;
+            align-items: flex-start; /* Alinhar itens ao topo */
+            padding: 10px;
+        }
+        .animal-img {
+            width: 200px; /* Largura fixa da imagem */
+            height: auto; /* Altura automática para manter a proporção */
+            border-top-left-radius: 0.25rem; /* Arredondamento dos cantos da imagem */
+            border-bottom-left-radius: 0.25rem; /* Arredondamento dos cantos da imagem */
+        }
+        .animal-info {
+            padding: 1.25rem;
+            text-align: left; /* Alinha o texto à esquerda */
+            flex-grow: 1; /* Permite que o conteúdo das informações cresça */
+        }
+        .animal-title {
+            margin-bottom: 0.75rem;
+        }
+        .animal-icons {
+            display: flex;
+            justify-content: flex-end; /* Alinha os ícones à direita */
+            align-items: center;
+            margin-top: 10px;
+        }
+        .animal-icons .btn-edit {
+            margin-left: 5px; /* Adicione margem à esquerda para espaçamento entre os ícones */
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer; /* Altera o cursor para indicar que é clicável */
+            border: none;
+            background-color: #ffc107; /* Cor amarela fixa */
+            padding: 15px 15px; /* Adicione preenchimento ao botão */
+            border-radius: 4px; /* Arredonde as bordas do botão */
+        }
+        .animal-icons .btn-edit:focus {
+            outline: none;
+        }
+        .animal-icons .btn-delete {
+            margin-left: 5px; /* Adicione margem à esquerda para espaçamento entre os ícones */
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer; /* Altera o cursor para indicar que é clicável */
+            border: none;
+            background-color: #dc3545; /* Cor vermelha fixa */
+            padding: 15px 15px; /* Adicione preenchimento ao botão */
+            border-radius: 4px; /* Arredonde as bordas do botão */
+        }
+        .animal-icons .btn-delete:focus {
+            outline: none;
+        }
+        
+    </style>
+
+
+    <h1 class="mt-5">Lista de Animais</h1>
+    <br>
+    <!-- Botão para cadastrar novo animal -->
+    <a href="{% url 'criar_animal' %}" class="btn btn-secondary ml-auto">Cadastrar Animal</a>
+    <br>
+    <a href="{% url 'logout' %}" class="btn btn-primary">Encerrar Sessão</a>
+
+
+    <div class="container">
+        {% if mensagem %}
+            <div class="alert alert-success" role="alert">
+                {{ mensagem }}
+            </div>
+        {% endif %}
+        <ul class="list-unstyled">
+            {% for animal in animais %}
+            <li class="animal-card mb-4">
+                <img src="{{ animal.foto.url }}" class="animal-img" alt="{{ animal.nome }}">
+                <div class="animal-info">
+                    <h5 class="animal-title">{{ animal.nome }}</h5>
+                    <p><strong>Idade:</strong> {{ animal.idade }}</p>
+                    <p><strong>Espécie:</strong> {{ animal.get_especie_display }}</p>
+                    <p><strong>Raça:</strong> {{ animal.raca }}</p>
+                    <p><strong>Porte:</strong> {{ animal.porte }}</p>
+                    <p><strong>Sexo:</strong> {{ animal.get_sexo_display }}</p>
+                    <p><strong>Castrado:</strong> {% if animal.castrado %} Sim {% else %} Não {% endif %}</p>
+                    <p><strong>Vacinado:</strong> {% if animal.vacinado %} Sim {% else %} Não {% endif %}</p>
+                    <p><strong>Doenças Existente:</strong> {{ animal.doencas_existentes }}</p>
+                    <p><strong>Adotado:</strong> {% if animal.adotado %} Sim {% else %} Não {% endif %}</p>
+                    <p><strong>Data de Cadastro:</strong> {{ animal.data }}</p>
+                    <div class="animal-icons">
+                        <a href="/editar_animal/{{ animal.id }}">
+                            <button type="button" class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
+                        </a>
+                        <form id="delete-form-{{ animal.id }}" method="POST" action="{% url 'excluir_animal' animal.id %}">
+                            {% csrf_token %}
+                            <button type="button" class="btn-delete" onclick="confirmDelete('{{ animal.id }}')"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+
+    <script>
+        function confirmDelete(animalId) {
+            if (confirm("Tem certeza que deseja excluir este animal?")) {
+                document.getElementById("delete-form-" + animalId).submit();
+            }
+        }
+    </script>
+
+{% endblock %}

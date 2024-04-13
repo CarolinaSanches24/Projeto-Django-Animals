@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+{% block content %}
+
+<div class="container-fluid d-flex flex-column justify-content-between min-vh-100">
+  <div>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="text-center">
+          <h2>Projeto Final: Abrigo de Animais</h2>
+          <p>Estamos muito felizes em concluir o Bootcamp WomakersCode 🎉!! O projeto 'Abrigo de Animais' foi elaborado  com muita dedicação e colaboração aplicando conhecimentos e habilidades adquiridos nos treinamentos e aulas ministradas pelas incríveis professoras do WomakersCode. Isso possibilitou aplicar o conhecimento adquirido em GitHub, HTML5, CSS3, Bancos de Dados e o Framework Django no nosso projeto final. Obrigada Womakerscode!!</p>
+          <!-- Div para envolver a imagem -->
+          <div class="blue-box">
+            <img src="{% static 'img/Squad_Dorothy_.png' %}" class="foto" alt=""/>
+          </div>
+        <br>
+          <!-- Botão de voltar -->
+          <a href="#" onclick="history.back()" class="btn btn-secondary">Voltar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+

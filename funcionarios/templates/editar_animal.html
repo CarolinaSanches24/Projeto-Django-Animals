@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <h1 class="mt-5 mb-5">Editar Animal</h1>
+        <form method="POST" enctype="multipart/form-data" class="row">
+            {% csrf_token %}
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="id_nome">Nome</label>
+                    <input type="text" class="form-control" id="id_nome" name="nome" value="{{ form.instance.nome }}">
+                </div>
+                <div class="form-group">
+                    <label for="id_idade">Idade</label>
+                    <input type="text" class="form-control" id="id_idade" name="idade" value="{{ form.instance.idade }}">
+                </div>
+                <div class="form-group">
+                    <label for="id_especie">Espécie</label>
+                    <select class="form-control" id="id_especie" name="especie">
+                        {% for especie in form.fields.especie.choices %}
+                            <option value="{{ especie.0 }}" {% if especie.0 == form.instance.especie %} selected {% endif %}>{{ especie.1 }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="id_raca">Raça</label>
+                    <input type="text" class="form-control" id="id_raca" name="raca" value="{{ form.instance.raca }}">
+                </div>
+                <div class="form-group">
+                    <label for="id_porte">Porte</label>
+                    <select class="form-control" id="id_porte" name="porte">
+                        <option value="P" {% if form.instance.porte == 'P' %} selected {% endif %}>Pequeno</option>
+                        <option value="M" {% if form.instance.porte == 'M' %} selected {% endif %}>Médio</option>
+                        <option value="G" {% if form.instance.porte == 'G' %} selected {% endif %}>Grande</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="id_sexo">Sexo</label>
+                    <select class="form-control" id="id_sexo" name="sexo">
+                        <option value="macho" {% if form.instance.sexo == 'macho' %} selected {% endif %}>Macho</option>
+                        <option value="femea" {% if form.instance.sexo == 'femea' %} selected {% endif %}>Fêmea</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_castrado">Castrado</label>
+                    <input type="checkbox" id="id_castrado" name="castrado" {% if form.instance.castrado %} checked {% endif %}>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_vacinado">Vacinado</label>
+                    <input type="checkbox" id="id_vacinado" name="vacinado" {% if form.instance.vacinado %} checked {% endif %}>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_doencas_existentes">Doença Pré-existente</label>
+                    <input type="text" class="form-control" id="id_doencas_existentes" name="doencas_existentes" value="{{ form.instance.doencas_existentes }}">
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="id_foto">Foto</label>
+                    {% if form.instance.foto %}
+                        <img src="{{ form.instance.foto.url }}" class="img-thumbnail" alt="Foto do animal">
+                    {% endif %}
+                    <input type="file" class="form-control mt-2" id="id_foto" name="foto">
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %} 

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h5 class="title">Amigo não se compra!!</h5>
+<br><br> 
+
+{% if mensagem %}
+    <p class="alert alert-primary alert-dismissible fade show m-5">
+        {{ mensagem }}
+    </p>
+{% endif %}
+<div class="search-container">
+    <form action="{% url 'pesquisa_animal' %}" method="GET">
+        <input
+            type="search"
+            id="search-input"
+            name="q"
+            placeholder="{% if query %}{{ query }}{% else %}Pesquisar por palavras chave raça, especie ...{% endif %}"
+        />
+        <button type="submit" id="search-button"></button>
+    </form>
+</div>
+
+
+<section class="container-cards">
+    {% for animal in list_animals %}
+        <div class="card" style="width: 18rem; height: 40rem">
+            <div class="card-body">
+                <img
+                    src="{{ animal.foto.url}}"
+                    alt="{{ animal.nome }}"
+                    class="card-img-top"
+                    width="200px"
+                    height="200px"
+                />
+
+                <h5 class="card-title">{{ animal.nome }}</h5>
+                {% if animal.sexo == 'femea' %}
+                    <img src="{% static 'icon/icon-female.png' %}" class="icon-gender" alt="">
+                {% else %}
+                    <img src="{% static 'icon/icon-masc.png' %}" class="icon-gender" alt="">
+                {% endif %}
+
+                <p class="card-text text-center align-left"><strong>Idade:</strong> {{ animal.idade}}</p>
+                <p class="card-text text-center align-left"><strong>Raça:</strong> {{ animal.raca}}</p>
+
+          <a href="/adocao" class="btn" data-username="{{ animal.nome }}">Quero adotar</a>
+          <a href="/detalhes/{{ animal.id }}" class="btn">Detalhes</a>
+               
+            </div>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}

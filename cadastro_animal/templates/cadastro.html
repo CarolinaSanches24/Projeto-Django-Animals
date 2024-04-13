@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}" />
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/registerAnimal.css' %}" />
+<link rel="stylesheet" href="{% static 'css/var.css' %}" />
+<section>
+  <h1>Cadastro Animal</h1>
+  {% if sucess %}
+  <p class="alert alert-success">Cadastro realizado com sucesso</p>
+  {% endif %}
+  <form method="POST" enctype="multipart/form-data" class="container-box">
+    {% csrf_token %}
+    <div class="form">{{ form.as_p }}</div>
+    <button type="submit" class="btn btn-warning">Salvar</button>
+  </form>
+</section>
+
+{%endblock%}

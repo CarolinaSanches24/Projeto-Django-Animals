@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1 class="mt-5 mb-5">Detalhes {{animal.nome}}</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="text-start"> <!-- Alinha à esquerda -->
+                <p class="mb-1"><strong>Nome:</strong> {{ animal.nome }}</p>
+                <p class="mb-1"><strong>Idade:</strong> {{ animal.idade }}</p>
+                <p class="mb-1"><strong>Espécie:</strong> {{ animal.get_especie_display }}</p>
+                <p class="mb-1"><strong>Raça:</strong> {{ animal.raca }}</p>
+                <p class="mb-1"><strong>Sexo:</strong> {{ animal.sexo }}</p>
+                <p class="mt-3 fw-bold">Historico de Saúde</p>
+                <ul class="list-text">
+                    <li class="list-text"><strong>Castrado:</strong> {% if animal.castrado %} Sim {% else %} Não {% endif %}</li>
+                    <li class="list-text"><strong>Vacinado:</strong> {% if animal.vacinado %} Sim {% else %} Não {% endif %}</li>
+                    <li class="list-text"><strong>Doença pré-existente:</strong> {{ animal.doencas_existentes }}</li>
+                </ul>
+                
+                <a href="/adocao" class="btn btn-warning text-light">Deseja continuar com a adoção</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card"> <!-- Card Bootstrap -->
+                <img src="{{ animal.foto.url }}" class="card-img-top" alt="foto do animal">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
