@@ -1,29 +1,29 @@
 .container {
-    padding-top: 20px; /* Adiciona espaço no topo */
-    padding-bottom: 20px; /* Adiciona espaço na parte inferior */
-  }
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
-  .text-center {
-    margin-bottom: 20px; /* Adiciona espaço abaixo do texto centralizado */
-  }
+.text-center {
+  margin: 2rem 0 2rem 0;
+}
 
-  .blue-box {
-    background-color: #144484; /* Cor azul */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Borda arredondada */
-    max-width: 400px; /* Largura máxima da caixa */
-    margin: auto; /* Centraliza horizontalmente */
-  }
+.blue-box {
+  background-color: var(--color-blue);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+}
 
-  .blue-box img {
-    width: 100%; /* Garante que a imagem se ajuste à largura da caixa */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Permite definir margens automáticas */
-    margin: auto; /* Centraliza a imagem horizontalmente */
-  }
+.blue-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
 
-  .blue-box hr {
-    margin-top: 20px; /* Adiciona espaço acima da linha */
-    margin-bottom: 20px; /* Adiciona espaço abaixo da linha */
-    border-color: #ffffff; /* Cor da linha */
-  }
+.blue-box hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: var(--color-white);
+}
