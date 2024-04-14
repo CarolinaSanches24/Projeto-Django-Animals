@@ -65,4 +65,10 @@
     font-family: var(--font-Radley);
     color: var(--color-blue);
   }
+  .form-label {
+    color: var(--color-blue) !important;
+  }
+  .form-control {
+    border: solid 1px var(--color-blue)!important;
+  }
 }
