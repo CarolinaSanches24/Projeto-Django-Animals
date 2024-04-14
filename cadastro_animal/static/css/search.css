@@ -3,7 +3,7 @@
   align-items: center;
   width: 100%;
   max-width: 35em;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-light-gray);
   border-radius: 4px;
   margin: 10px auto;
   font-family: var(--font-Noto);

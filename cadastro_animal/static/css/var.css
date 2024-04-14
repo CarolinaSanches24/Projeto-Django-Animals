@@ -3,7 +3,28 @@
   --color-white: #fff;
   --color-gray: #727272;
   --color-blue: #144484;
+  --color-light-gray: #ccc;
+  --color-snow: #fffafa;
 
   --font-Radley: "Radley", serif;
   --font-Noto: "Noto Sans", sans-serif;
+
+  --effect-radial-gradient: radial-gradient(
+      49% 81% at 45% 47%,
+      #ffe20345 0%,
+      #073aff00 100%
+    ),
+    radial-gradient(113% 91% at 17% -2%, #ff5a00ff 1%, #ff000000 99%),
+    radial-gradient(142% 91% at 83% 7%, #ffdb00ff 1%, #ff000000 99%),
+    radial-gradient(142% 91% at -6% 74%, #ff0049ff 1%, #ff000000 99%),
+    radial-gradient(142% 91% at 111% 84%, #ffdb00ff 0%, #ffdb00ff 100%);
+
+  --effect-radial-gradient-yellow: radial-gradient(
+      49% 81% at 45% 47%,
+      #ffe20345 0%,
+      #073aff00 100%
+    ),
+    radial-gradient(142% 91% at 83% 7%, #ffdb00ff 1%, #ff000000 99%),
+    radial-gradient(142% 91% at 111% 84%, #ffdb00ff 0%, #ffdb00ff 100%);
+  --effect-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
 }
