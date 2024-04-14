@@ -8,3 +8,9 @@ function menuShow() {
     document.querySelector(".icon").src = "/static/img/close_white_36dp.svg";
   }
 }
+
+function confirmDelete(animalId) {
+  if (confirm("Tem certeza que deseja excluir este animal?")) {
+    document.getElementById("delete-form-" + animalId).submit();
+  }
+}
