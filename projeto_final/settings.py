@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'detalhesanimal',   
     'funcionarios',
     #Deploy
-    # 'whitenoise.runserver_nostatic',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #Deploy
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'projeto_final.urls'
@@ -136,11 +136,11 @@ USE_TZ = True
 
 # Defina o diretório onde seus arquivos estáticos serão coletados
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'staticfiles'),)
 STATIC_ROOT = os.path.join('static')
 
 #Deploy 
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
