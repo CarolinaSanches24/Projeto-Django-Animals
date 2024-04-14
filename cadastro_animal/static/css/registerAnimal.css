@@ -1,8 +1,7 @@
-@import "var.css";
 .container-box {
   background-color: var(--color-white);
   border-radius: 5px;
-  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--effect-shadow);
   width: 650px;
   margin: 0 auto;
   margin-top: 5rem;
@@ -15,6 +14,7 @@
   display: flex;
   flex-direction: column;
   font-size: 24px;
+  font-family: var(--font-Radley);
 }
 .form input {
   width: 30rem;
@@ -25,7 +25,7 @@
 }
 .form input:focus {
   outline: none;
-  border: solid 2px rgb(30, 9, 162);
+  border: solid 2px var(--color-blue-dark);
   transition: 0.8s;
 }
 .form select {
@@ -36,7 +36,7 @@
   margin-left: 5rem;
   font-size: 30px !important;
   color: #fff !important;
-  font-family: "Radley" !important;
+  font-family: var(--font-Radley);
   margin-bottom: 5rem;
 }
 .form input[type="checkbox"] {
@@ -48,6 +48,49 @@
 
 h1 {
   margin-top: 50px;
-  font-family: "Radley", sans-serif;
+  font-family: var(--font-Radley);
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    max-width: 300px;
+  }
+  .form {
+    margin-left: -25px;
+  }
+  .form input {
+    max-width: 12rem;
+    height: 2.5rem;
+  }
+  .form label {
+    font-size: 12px;
+    font-family: var(--font-Radley);
+  }
+  .form select {
+    max-width: 12rem;
+    font-size: 12px;
+    font-family: var(--font-Radley);
+  }
+  .form input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: -1rem;
+    left: 5rem;
+  }
+  .form textarea {
+    width: 12rem;
+    font-size: 12px;
+    font-family: var(--font-Radley);
+  }
+  .btn {
+    max-width: 10rem;
+    margin-left: 4.5rem;
+    font-size: 12px !important;
+  }
+  .form input[type="file"] {
+    font-size: 12px;
+    margin:0 auto;
+  }
 }
