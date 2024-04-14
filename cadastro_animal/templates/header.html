@@ -1,8 +1,35 @@
 {% load static %}
 <header class="header">
+  <nav class="container_menu">
     <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
     <a href="/" title="informacoes" class="pag_link">Home</a>
     <a href="{% url 'quem_somos' %}" class="pag_link">Quem Somos</a>
-    <a href="/sejaparceiro" title="Parcerias" class="pag_link">Seja nosso parceiro</a>
+    <a href="/sejaparceiro" title="Parcerias" class="pag_link"
+      >Seja nosso parceiro</a
+    >
     <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
+  </nav>
+  <div class="container_menu_mobile">
+    <div class="mobile-menu-icon">
+      <button onclick="menuShow()">
+        <img class="icon" src="{% static 'img/menu_white_36dp.svg' %}" alt="" />
+      </button>
+    </div>
+
+    <div class="mobile-menu">
+      <ul>
+        <li class="nav-item"><a href="/" class="pag_link">Home</a></li>
+        <li class="nav-item">
+          <a href="{% url 'quem_somos' %}" class="pag_link">Quem Somos</a>
+        </li>
+        <li class="nav-item">
+          <a href="/sejaparceiro" class="pag_link">Seja nosso parceiro</a>
+        </li>
+      </ul>
+
+      <div class="login-button">
+        <a class="pag_link" href="/login">Entrar</a>
+      </div>
+    </div>
+  </div>
 </header>

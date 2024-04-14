@@ -12,7 +12,5 @@ O projeto desenvolvido como Desafio final do Bootcamp de Back-End Python visa co
 - [Maitê Haramoni Soares](https://github.com/maiharamoni)
 - [Thaís Aparecida dos Santos](https://github.com/ThaisAp10)
 - [Maria Carolina de J. de Moraes](https://github.com/CarolinaSanches24)
-- Kássia Ellen da Silva Nascimento (não partipou)
-- Renata Vitoria (não partipou)
-- Janaina Solidade (não participou)
+
 
