@@ -15,7 +15,7 @@
   font-size: 14px;
   font-family: var(--font-Noto);
   border: none;
-  width: 25vw;
+  width: 35vw;
   margin-left: 10px;
 }
 
@@ -37,19 +37,7 @@ input:focus {
 }
 
 @media screen and (max-width: 768px) {
-  .search-container {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  #search-input {
-    padding: 5px;
-    width: 18rem;
-    outline: none;
-    font-size: 16px;
-  }
-
-  #search-button {
-    width: 1rem;
+  #search-input{
+    width:18rem;
   }
 }
