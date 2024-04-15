@@ -141,7 +141,7 @@ STATIC_ROOT = os.path.join('static')
 
 #Deploy 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
+CSRF_TRUSTED_ORIGINS = ['https://web-production-60fb.up.railway.app/cadastrarAnimal/']
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 MEDIA_URL = '/media/'
