@@ -19,13 +19,13 @@
   color: var(--color-blue);
 }
 .container_modal label {
-  color: var(--color-white);
+  color: var(--color-blue);
 }
 .container_modal input {
   outline: none;
   width: 15rem;
   border-radius: 5px;
-  border: none;
+  border: solid 1px var(--color-blue);
 }
 .container_modal .image-modal {
   max-width: 150px;
@@ -69,6 +69,6 @@
     color: var(--color-blue) !important;
   }
   .form-control {
-    border: solid 1px var(--color-blue)!important;
+    border: solid 1px var(--color-blue) !important;
   }
 }
