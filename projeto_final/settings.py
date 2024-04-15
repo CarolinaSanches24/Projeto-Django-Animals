@@ -38,7 +38,7 @@ CORS_ORIGIN_WHITELIST = [
     'https://web-production-60fb.up.railway.app',
     # outros domínios permitidos, se houver
 ]
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['web-production-60fb.up.railway.app']
 
 
 # Application definition
@@ -145,7 +145,7 @@ STATIC_ROOT = os.path.join('static')
 
 #Deploy 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-CSRF_TRUSTED_ORIGINS = ['https://web-production-60fb.up.railway.app/cadastrarAnimal/']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-60fb.up.railway.app']
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 MEDIA_URL = '/media/'

@@ -2,6 +2,10 @@
 
 O projeto desenvolvido como Desafio final do Bootcamp de Back-End Python visa consolidar e aplicar o conhecimento adquirido em GitHub, HTML5, CSS3, Bancos de Dados e o Framework Django. Criando uma aplicação responsiva com recursos robustos, integrando elementos como banco de dados, gerenciamento de conteúdo e interatividade.
 
+### Funcionalidades do Projeto
+
+- SearchBar (Barra de pesquisa): Filtrando animais por nome, especie,raça,porte,idade,sexo. 
+
 ## Integrantes do Squad:
 
 - [Ana Carolina Fonseca Barreto](https://github.com/anafbarreto)
