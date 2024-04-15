@@ -34,6 +34,10 @@ SECRET_KEY = 'django-insecure-c_1(wyy2qzr$r*#y%*#8h#$_&5xcw*sc&4(-+^e-nlr3-0^s$$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CORS_ORIGIN_WHITELIST = [
+    'https://web-production-60fb.up.railway.app',
+    # outros domínios permitidos, se houver
+]
 ALLOWED_HOSTS = ['*']
 
 
