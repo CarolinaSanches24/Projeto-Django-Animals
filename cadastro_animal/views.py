@@ -6,7 +6,7 @@ from rest_framework import viewsets, status
 from cadastro_animal.serializers import AnimalSerializer
 from django.db.models import Q
 from rest_framework.response import Response
-
+from django.views.decorators.csrf import csrf_protect
 # Create your views here.
 
 def home(request):
@@ -40,6 +40,7 @@ def pesquisa_animal(request):
 
     return render(request, 'home.html', {'list_animals': list_animals, 'mensagem': mensagem, 'query': query})
 
+@csrf_protect
 def criar_animal(request):
     sucess = False  # Inicialmente, definimos sucesso como falso
     if request.method == 'POST':
