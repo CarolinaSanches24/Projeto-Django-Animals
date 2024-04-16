@@ -9,6 +9,7 @@ O projeto desenvolvido como Desafio final do Bootcamp de Back-End Python visa co
 ## Integrantes do Squad:
 
 - [Ana Carolina Fonseca Barreto](https://github.com/anafbarreto)
+<img src="">
 - [Jane Souza](https://github.com/janessf)
 - [Simone Braghin](https://github.com/SimoneBraghin)
 - [Clarice Sofia Henrique Soares](https://github.com/claricesoares)
