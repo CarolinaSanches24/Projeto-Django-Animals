@@ -10,7 +10,7 @@
         alt="Avatar mulher com gatinho"
       />
       <br />
-      <form action="{% url 'pagina_apos_login' %}" method="GET" id="login-form" novalidate>
+      <form action="{% url 'pagina_apos_login' %}" method="POST" id="login-form" novalidate>
         {% csrf_token %}
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>

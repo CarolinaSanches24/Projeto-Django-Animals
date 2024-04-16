@@ -4,12 +4,13 @@ O projeto desenvolvido como Desafio final do Bootcamp de Back-End Python visa co
 
 ### Funcionalidades do Projeto
 
-- SearchBar (Barra de pesquisa): Filtrando animais por nome, especie,raça,porte,idade,sexo. 
+- SearchBar (Barra de pesquisa): Filtrando animais por nome, especie,raça,porte,idade,sexo.
 
 ## Integrantes do Squad:
 
+ <img src="./assets/img-author/Squad_Dorothy_.png" style="margin:0 auto">
+
 - [Ana Carolina Fonseca Barreto](https://github.com/anafbarreto)
-<img src="">
 - [Jane Souza](https://github.com/janessf)
 - [Simone Braghin](https://github.com/SimoneBraghin)
 - [Clarice Sofia Henrique Soares](https://github.com/claricesoares)
@@ -17,5 +18,3 @@ O projeto desenvolvido como Desafio final do Bootcamp de Back-End Python visa co
 - [Maitê Haramoni Soares](https://github.com/maiharamoni)
 - [Thaís Aparecida dos Santos](https://github.com/ThaisAp10)
 - [Maria Carolina de J. de Moraes](https://github.com/CarolinaSanches24)
-
-
