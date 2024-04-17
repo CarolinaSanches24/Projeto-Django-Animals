@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="container_registerUser">
+  <h2 class="title">Cadastro de Usuário</h2>
+  <form
+    action="{% url 'cadastroUsers' %}"
+    method="POST"
+    id="registration-form"
+    class="registration-form"
+  >
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="john@email.com" />
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" />
+    <input type="submit" value="cadastrar" class="buttonSave"/>
+  
+  </form>
+</section>
+{% endblock %}

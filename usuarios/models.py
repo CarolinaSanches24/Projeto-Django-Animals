@@ -1,6 +1,7 @@
 from django.db import models
 
-class funcionarios(models.Model):
+# Create your models here.
+class usuarios(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=50) 
     email = models.EmailField(max_length=50, unique=True)
@@ -17,7 +18,6 @@ class funcionarios(models.Model):
         return f'{self.nome}, {self.cargo}'
     
     class Meta: # Alterando o nome das bases dentro do admin
-        verbose_name = 'Funcionário' # Nome do formulario'
-        verbose_name_plural = 'Funcionários'
+        verbose_name = 'Usuarios' # Nome do formulario'
+        verbose_name_plural = 'Usuarios'
         ordering = ['nome']
-        

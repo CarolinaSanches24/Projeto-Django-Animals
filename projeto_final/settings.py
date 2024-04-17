@@ -38,7 +38,7 @@ CORS_ORIGIN_WHITELIST = [
     'https://web-production-60fb.up.railway.app',
     # outros domínios permitidos, se houver
 ]
-ALLOWED_HOSTS = ['web-production-60fb.up.railway.app']
+# ALLOWED_HOSTS = ['web-production-60fb.up.railway.app']
 
 
 # Application definition
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'cadastro_animal',
     'rest_framework',
     'detalhesanimal',   
-    'funcionarios',
+    'usuarios',
     #Deploy
     'whitenoise.runserver_nostatic',
 ]

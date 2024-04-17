@@ -7,7 +7,7 @@
     <a href="/sejaparceiro" title="Parcerias" class="pag_link"
       >Seja nosso parceiro</a
     >
-    <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
+    <a href="{% url 'user_login' %}" title="Login" class="pag_link login_link">Entrar</a>
   </nav>
   <div class="container_menu_mobile">
     <div class="mobile-menu-icon">
@@ -28,7 +28,7 @@
       </ul>
 
       <div class="login-button">
-        <a class="pag_link" href="/login">Entrar</a>
+        <a class="pag_link" href="{% url 'user_login' %}">Entrar</a>
       </div>
     </div>
   </div>

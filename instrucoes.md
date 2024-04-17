@@ -42,3 +42,11 @@ terminal: python manage.py startapp nome_da_pasta
 #### Executar o server
 
 terminal: python manage.py runserver
+
+#### Create superUser
+
+```
+python manage.py createsuperuser
+```
+
+https://www.youtube.com/watch?v=gdhiA6wObw0

@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #144484; 
+  padding: 10px 0;
+  text-align: center;
+}
+.content {
+  margin-bottom: 60px; 
+}
+.container_erro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container_erro img {
+  box-shadow: var(--effect-shadow);
+  max-width: 25rem;
+}

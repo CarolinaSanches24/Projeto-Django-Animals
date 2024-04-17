@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="container_erro">
+    
+  <h2 class="title">Usuário não autorizado</h2>
+  <img
+        src="{% static 'img/erro.jpg' %}"
+        class="cat_error"
+        alt="Gatinho acesso não autorizado"
+      />
+    
+</section>
+{% endblock %}
